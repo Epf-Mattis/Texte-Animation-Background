@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,600;1,600&display=swap');
+
+body {
+  font-family: 'Source Code Pro', monospace; 
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 35px;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.scrolling-text {
+  white-space: nowrap;
+}
+
+.left-to-right {
+    animation: scroll-left 30s linear infinite; /* Modifié le délai */
+    animation-delay: -15s; /* Démarrage en même temps que l'animation right-to-left */
+  }
+  
+  .right-to-left {
+    animation: scroll-right 30s linear infinite; 
+    animation-delay: 0s; 
+  }
+  
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
